@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <BuildTasksDirectory Condition=" '$(BuildTasksDirectory)' == ''">$(MSBuildProgramFiles32)\MSBuild\Microsoft\Dynamics\AX</BuildTasksDirectory>
+    <Model>ExchangeRuby</Model>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <OutputPath>bin</OutputPath>
+    <SchemaVersion>2.0</SchemaVersion>
+    <GenerateCrossReferences>True</GenerateCrossReferences>
+    <RunAppCheckerRules>False</RunAppCheckerRules>
+    <LogAppcheckerDiagsAsErrors>False</LogAppcheckerDiagsAsErrors>
+    <DeployOnline>False</DeployOnline>
+    <ProjectGuid>{58254fd0-030d-4aec-8c3c-cdd483a30358}</ProjectGuid>
+    <Name>Exchange</Name>
+    <RootNamespace>Exchange</RootNamespace>
+    <StartupType>Class</StartupType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Configuration>Debug</Configuration>
+    <DBSyncInBuild>False</DBSyncInBuild>
+    <GenerateFormAdaptors>False</GenerateFormAdaptors>
+    <Company>
+    </Company>
+    <Partition>initial</Partition>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DataEntityExpandParentChildRelations>False</DataEntityExpandParentChildRelations>
+    <DataEntityUseLabelTextAsFieldName>False</DataEntityUseLabelTextAsFieldName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="AxEdt\Asset_ExchangeRuby">
+      <SubType>Content</SubType>
+      <Name>Asset_ExchangeRuby</Name>
+      <Link>Asset_ExchangeRuby</Link>
+    </Content>
+    <Content Include="AxLabelFile\LabelFile_ExchangeRuby_en-US">
+      <SubType>Content</SubType>
+      <Name>LabelFile_ExchangeRuby_en-US</Name>
+      <Link>LabelFile_ExchangeRuby_en-US</Link>
+    </Content>
+    <Content Include="AxLabelFile\LabelFile_ExchangeRuby_hy-AM">
+      <SubType>Content</SubType>
+      <Name>LabelFile_ExchangeRuby_hy-AM</Name>
+      <Link>LabelFile_ExchangeRuby_hy-AM</Link>
+    </Content>
+    <Content Include="AxLabelFile\LabelFile_ExchangeRuby_ru-RU">
+      <SubType>Content</SubType>
+      <Name>LabelFile_ExchangeRuby_ru-RU</Name>
+      <Link>LabelFile_ExchangeRuby_ru-RU</Link>
+    </Content>
+    <Content Include="LabelFile_ExchangeRuby.en-US.label.txt">
+      <SubType>Content</SubType>
+      <Name>LabelFile_ExchangeRuby.en-US.label.txt</Name>
+      <DependentUpon>AxLabelFile\LabelFile_ExchangeRuby_en-US</DependentUpon>
+    </Content>
+    <Content Include="LabelFile_ExchangeRuby.hy-AM.label.txt">
+      <SubType>Content</SubType>
+      <Name>LabelFile_ExchangeRuby.hy-AM.label.txt</Name>
+      <DependentUpon>AxLabelFile\LabelFile_ExchangeRuby_hy-AM</DependentUpon>
+    </Content>
+    <Content Include="LabelFile_ExchangeRuby.ru-RU.label.txt">
+      <SubType>Content</SubType>
+      <Name>LabelFile_ExchangeRuby.ru-RU.label.txt</Name>
+      <DependentUpon>AxLabelFile\LabelFile_ExchangeRuby_ru-RU</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(BuildTasksDirectory)\Microsoft.Dynamics.Framework.Tools.BuildTasks.17.0.targets" />
+</Project>

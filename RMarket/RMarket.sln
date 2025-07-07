@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35806.99
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FC65038C-1B2F-41E1-A629-BED71D161FFF}") = "RMarket (USR) [RMarket]", "RMarket\RMarket.rnrproj", "{EF9030F0-BC69-4D6F-94C4-58E10C7A4F27}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF9030F0-BC69-4D6F-94C4-58E10C7A4F27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF9030F0-BC69-4D6F-94C4-58E10C7A4F27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {30EF7FA7-5E1D-417D-AB27-8A7116A30D03}
+	EndGlobalSection
+EndGlobal

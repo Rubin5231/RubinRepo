@@ -1,0 +1,586 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <BuildTasksDirectory Condition=" '$(BuildTasksDirectory)' == ''">$(MSBuildProgramFiles32)\MSBuild\Microsoft\Dynamics\AX</BuildTasksDirectory>
+    <Model>RMarket</Model>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <OutputPath>bin</OutputPath>
+    <SchemaVersion>2.0</SchemaVersion>
+    <GenerateCrossReferences>True</GenerateCrossReferences>
+    <RunAppCheckerRules>False</RunAppCheckerRules>
+    <LogAppcheckerDiagsAsErrors>False</LogAppcheckerDiagsAsErrors>
+    <DeployOnline>False</DeployOnline>
+    <ProjectGuid>{ef9030f0-bc69-4d6f-94c4-58e10c7a4f27}</ProjectGuid>
+    <Name>RMarket</Name>
+    <RootNamespace>RMarket</RootNamespace>
+    <StartupType>MenuItemDisplay</StartupType>
+    <StartupObject>RMarketCandleGapsForm</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Configuration>Debug</Configuration>
+    <DBSyncInBuild>True</DBSyncInBuild>
+    <GenerateFormAdaptors>False</GenerateFormAdaptors>
+    <Company>
+    </Company>
+    <Partition>initial</Partition>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DataEntityExpandParentChildRelations>False</DataEntityExpandParentChildRelations>
+    <DataEntityUseLabelTextAsFieldName>False</DataEntityUseLabelTextAsFieldName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Action Menu Items\" />
+    <Folder Include="Base Enums\" />
+    <Folder Include="Classes\" />
+    <Folder Include="Classes\Jobs" />
+    <Folder Include="Classes\Contracts" />
+    <Folder Include="Classes\Engine" />
+    <Folder Include="Classes\IndicatorCalculator" />
+    <Folder Include="Composite Queries\" />
+    <Folder Include="Display Menu Items\" />
+    <Folder Include="EDT Integer64s\" />
+    <Folder Include="EDT Reals\" />
+    <Folder Include="EDT Strings\" />
+    <Folder Include="Extended Data Types\" />
+    <Folder Include="Forms\" />
+    <Folder Include="Menu Extensions\" />
+    <Folder Include="Menus\" />
+    <Folder Include="Output Menu Items\" />
+    <Folder Include="Reports\" />
+    <Folder Include="Security Privileges\" />
+    <Folder Include="Security Roles\" />
+    <Folder Include="Simple Queries\" />
+    <Folder Include="Tables\" />
+    <Folder Include="Views\" />
+    <Folder Include="Workflow Categories\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AxClass\CustTableTableEventHandler">
+      <SubType>Content</SubType>
+      <Name>CustTableTableEventHandler</Name>
+      <Link>Classes\CustTableTableEventHandler</Link>
+    </Content>
+    <Content Include="AxClass\RMarketAPI">
+      <SubType>Content</SubType>
+      <Name>RMarketAPI</Name>
+      <Link>Classes\RMarketAPI</Link>
+    </Content>
+    <Content Include="AxClass\RMarketAPIEng">
+      <SubType>Content</SubType>
+      <Name>RMarketAPIEng</Name>
+      <Link>Classes\Engine\RMarketAPIEng</Link>
+    </Content>
+    <Content Include="AxClass\RMarketAPIEng_Kline">
+      <SubType>Content</SubType>
+      <Name>RMarketAPIEng_Kline</Name>
+      <Link>Classes\Engine\RMarketAPIEng_Kline</Link>
+    </Content>
+    <Content Include="AxClass\RMarketAPIEng_Kline_Binance">
+      <SubType>Content</SubType>
+      <Name>RMarketAPIEng_Kline_Binance</Name>
+      <Link>Classes\Engine\RMarketAPIEng_Kline_Binance</Link>
+    </Content>
+    <Content Include="AxClass\RMarketAPIEng_Kline_Bybit">
+      <SubType>Content</SubType>
+      <Name>RMarketAPIEng_Kline_Bybit</Name>
+      <Link>Classes\Engine\RMarketAPIEng_Kline_Bybit</Link>
+    </Content>
+    <Content Include="AxClass\RMarketAPIEng_Time">
+      <SubType>Content</SubType>
+      <Name>RMarketAPIEng_Time</Name>
+      <Link>Classes\Engine\RMarketAPIEng_Time</Link>
+    </Content>
+    <Content Include="AxClass\RMarketAPIEng_Time_Binance">
+      <SubType>Content</SubType>
+      <Name>RMarketAPIEng_Time_Binance</Name>
+      <Link>Classes\Engine\RMarketAPIEng_Time_Binance</Link>
+    </Content>
+    <Content Include="AxClass\RMarketAPIEng_Time_Bybit">
+      <SubType>Content</SubType>
+      <Name>RMarketAPIEng_Time_Bybit</Name>
+      <Link>Classes\Engine\RMarketAPIEng_Time_Bybit</Link>
+    </Content>
+    <Content Include="AxClass\RMarketAPI_Kline">
+      <SubType>Content</SubType>
+      <Name>RMarketAPI_Kline</Name>
+      <Link>Classes\RMarketAPI_Kline</Link>
+    </Content>
+    <Content Include="AxClass\RMarketFixGaps">
+      <SubType>Content</SubType>
+      <Name>RMarketFixGaps</Name>
+      <Link>Classes\RMarketFixGaps</Link>
+    </Content>
+    <Content Include="AxClass\RMarketFixGapsCandlesCalc">
+      <SubType>Content</SubType>
+      <Name>RMarketFixGapsCandlesCalc</Name>
+      <Link>Classes\RMarketFixGapsCandlesCalc</Link>
+    </Content>
+    <Content Include="AxClass\RMarketFixGapsCandlesDownload">
+      <SubType>Content</SubType>
+      <Name>RMarketFixGapsCandlesDownload</Name>
+      <Link>Classes\RMarketFixGapsCandlesDownload</Link>
+    </Content>
+    <Content Include="AxClass\RMarketHistoryLoadCalc">
+      <SubType>Content</SubType>
+      <Name>RMarketHistoryLoadCalc</Name>
+      <Link>Classes\RMarketHistoryLoadCalc</Link>
+    </Content>
+    <Content Include="AxClass\RMarketIndicatorCalc">
+      <SubType>Content</SubType>
+      <Name>RMarketIndicatorCalc</Name>
+      <Link>Classes\RMarketIndicatorCalc</Link>
+    </Content>
+    <Content Include="AxClass\RMarketIndicatorCalculator">
+      <SubType>Content</SubType>
+      <Name>RMarketIndicatorCalculator</Name>
+      <Link>Classes\IndicatorCalculator\RMarketIndicatorCalculator</Link>
+    </Content>
+    <Content Include="AxClass\RMarketIndicatorCalculator_EMA">
+      <SubType>Content</SubType>
+      <Name>RMarketIndicatorCalculator_EMA</Name>
+      <Link>Classes\IndicatorCalculator\RMarketIndicatorCalculator_EMA</Link>
+    </Content>
+    <Content Include="AxClass\RMarketIndicatorCalculator_RSI">
+      <SubType>Content</SubType>
+      <Name>RMarketIndicatorCalculator_RSI</Name>
+      <Link>Classes\IndicatorCalculator\RMarketIndicatorCalculator_RSI</Link>
+    </Content>
+    <Content Include="AxClass\RMarketIndicatorCalculator_SMA">
+      <SubType>Content</SubType>
+      <Name>RMarketIndicatorCalculator_SMA</Name>
+      <Link>Classes\IndicatorCalculator\RMarketIndicatorCalculator_SMA</Link>
+    </Content>
+    <Content Include="AxClass\RMarketJob">
+      <SubType>Content</SubType>
+      <Name>RMarketJob</Name>
+      <Link>Classes\Jobs\RMarketJob</Link>
+    </Content>
+    <Content Include="AxClass\RMarketJobTest">
+      <SubType>Content</SubType>
+      <Name>RMarketJobTest</Name>
+      <Link>Classes\Jobs\RMarketJobTest</Link>
+    </Content>
+    <Content Include="AxClass\RMarketJobTest_Kline_Bybit">
+      <SubType>Content</SubType>
+      <Name>RMarketJobTest_Kline_Bybit</Name>
+      <Link>Classes\Jobs\RMarketJobTest_Kline_Bybit</Link>
+    </Content>
+    <Content Include="AxClass\RMarketJob_rawJsonReader">
+      <SubType>Content</SubType>
+      <Name>RMarketJob_rawJsonReader</Name>
+      <Link>Classes\Jobs\RMarketJob_rawJsonReader</Link>
+    </Content>
+    <Content Include="AxClass\RMarketJsonKline_Binance">
+      <SubType>Content</SubType>
+      <Name>RMarketJsonKline_Binance</Name>
+      <Link>Classes\Contracts\RMarketJsonKline_Binance</Link>
+    </Content>
+    <Content Include="AxClass\RMarketJsonKline_Bybit">
+      <SubType>Content</SubType>
+      <Name>RMarketJsonKline_Bybit</Name>
+      <Link>Classes\Contracts\RMarketJsonKline_Bybit</Link>
+    </Content>
+    <Content Include="AxClass\RMarketJsonKline_Bybit_Response">
+      <SubType>Content</SubType>
+      <Name>RMarketJsonKline_Bybit_Response</Name>
+      <Link>Classes\Contracts\RMarketJsonKline_Bybit_Response</Link>
+    </Content>
+    <Content Include="AxClass\RMarketJsonSerializer">
+      <SubType>Content</SubType>
+      <Name>RMarketJsonSerializer</Name>
+      <Link>Classes\RMarketJsonSerializer</Link>
+    </Content>
+    <Content Include="AxClass\RMarketJsonSerializerValidZeroValueFlight">
+      <SubType>Content</SubType>
+      <Name>RMarketJsonSerializerValidZeroValueFlight</Name>
+      <Link>Classes\RMarketJsonSerializerValidZeroValueFlight</Link>
+    </Content>
+    <Content Include="AxClass\RMarketJsonTime_Binance">
+      <SubType>Content</SubType>
+      <Name>RMarketJsonTime_Binance</Name>
+      <Link>Classes\Contracts\RMarketJsonTime_Binance</Link>
+    </Content>
+    <Content Include="AxClass\RMarketJsonTime_Bybit">
+      <SubType>Content</SubType>
+      <Name>RMarketJsonTime_Bybit</Name>
+      <Link>Classes\Contracts\RMarketJsonTime_Bybit</Link>
+    </Content>
+    <Content Include="AxClass\RMarketJsonTime_Bybit_Response">
+      <SubType>Content</SubType>
+      <Name>RMarketJsonTime_Bybit_Response</Name>
+      <Link>Classes\Contracts\RMarketJsonTime_Bybit_Response</Link>
+    </Content>
+    <Content Include="AxClass\RMarketJson_Bybit_Response">
+      <SubType>Content</SubType>
+      <Name>RMarketJson_Bybit_Response</Name>
+      <Link>Classes\Contracts\RMarketJson_Bybit_Response</Link>
+    </Content>
+    <Content Include="AxClass\RMarketUtil">
+      <SubType>Content</SubType>
+      <Name>RMarketUtil</Name>
+      <Link>Classes\RMarketUtil</Link>
+    </Content>
+    <Content Include="AxEdt\RMarketAPIMethodURL">
+      <SubType>Content</SubType>
+      <Name>RMarketAPIMethodURL</Name>
+      <Link>EDT Strings\RMarketAPIMethodURL</Link>
+    </Content>
+    <Content Include="AxEdt\RMarketCandleClose">
+      <SubType>Content</SubType>
+      <Name>RMarketCandleClose</Name>
+      <Link>Extended Data Types\RMarketCandleClose</Link>
+    </Content>
+    <Content Include="AxEdt\RMarketCandleDateTime">
+      <SubType>Content</SubType>
+      <Name>RMarketCandleDateTime</Name>
+      <Link>Extended Data Types\RMarketCandleDateTime</Link>
+    </Content>
+    <Content Include="AxEdt\RMarketCandleHigh">
+      <SubType>Content</SubType>
+      <Name>RMarketCandleHigh</Name>
+      <Link>Extended Data Types\RMarketCandleHigh</Link>
+    </Content>
+    <Content Include="AxEdt\RMarketCandleIntervalStr">
+      <SubType>Content</SubType>
+      <Name>RMarketCandleIntervalStr</Name>
+      <Link>EDT Strings\RMarketCandleIntervalStr</Link>
+    </Content>
+    <Content Include="AxEdt\RMarketCandleLow">
+      <SubType>Content</SubType>
+      <Name>RMarketCandleLow</Name>
+      <Link>Extended Data Types\RMarketCandleLow</Link>
+    </Content>
+    <Content Include="AxEdt\RMarketCandleOpen">
+      <SubType>Content</SubType>
+      <Name>RMarketCandleOpen</Name>
+      <Link>Extended Data Types\RMarketCandleOpen</Link>
+    </Content>
+    <Content Include="AxEdt\RMarketCandleTurnover">
+      <SubType>Content</SubType>
+      <Name>RMarketCandleTurnover</Name>
+      <Link>Extended Data Types\RMarketCandleTurnover</Link>
+    </Content>
+    <Content Include="AxEdt\RMarketCandleVolume">
+      <SubType>Content</SubType>
+      <Name>RMarketCandleVolume</Name>
+      <Link>Extended Data Types\RMarketCandleVolume</Link>
+    </Content>
+    <Content Include="AxEdt\RMarketDurationMs">
+      <SubType>Content</SubType>
+      <Name>RMarketDurationMs</Name>
+      <Link>EDT Integer64s\RMarketDurationMs</Link>
+    </Content>
+    <Content Include="AxEdt\RMarketId">
+      <SubType>Content</SubType>
+      <Name>RMarketId</Name>
+      <Link>EDT Strings\RMarketId</Link>
+    </Content>
+    <Content Include="AxEdt\RMarketIndicatorParameter">
+      <SubType>Content</SubType>
+      <Name>RMarketIndicatorParameter</Name>
+      <Link>EDT Reals\RMarketIndicatorParameter</Link>
+    </Content>
+    <Content Include="AxEdt\RMarketIndicatorValue">
+      <SubType>Content</SubType>
+      <Name>RMarketIndicatorValue</Name>
+      <Link>EDT Reals\RMarketIndicatorValue</Link>
+    </Content>
+    <Content Include="AxEdt\RMarketSymbolId">
+      <SubType>Content</SubType>
+      <Name>RMarketSymbolId</Name>
+      <Link>EDT Strings\RMarketSymbolId</Link>
+    </Content>
+    <Content Include="AxEdt\RMarketTimestamp">
+      <SubType>Content</SubType>
+      <Name>RMarketTimestamp</Name>
+      <Link>EDT Integer64s\RMarketTimestamp</Link>
+    </Content>
+    <Content Include="AxEnum\RMarketAPIGetPost">
+      <SubType>Content</SubType>
+      <Name>RMarketAPIGetPost</Name>
+      <Link>Base Enums\RMarketAPIGetPost</Link>
+    </Content>
+    <Content Include="AxEnum\RMarketAPIMethodEnum">
+      <SubType>Content</SubType>
+      <Name>RMarketAPIMethodEnum</Name>
+      <Link>Base Enums\RMarketAPIMethodEnum</Link>
+    </Content>
+    <Content Include="AxEnum\RMarketCandleInterval">
+      <SubType>Content</SubType>
+      <Name>RMarketCandleInterval</Name>
+      <Link>Base Enums\RMarketCandleInterval</Link>
+    </Content>
+    <Content Include="AxEnum\RMarketFixGapsEnum">
+      <SubType>Content</SubType>
+      <Name>RMarketFixGapsEnum</Name>
+      <Link>Base Enums\RMarketFixGapsEnum</Link>
+    </Content>
+    <Content Include="AxEnum\RMarketIndicatorBaseEnum">
+      <SubType>Content</SubType>
+      <Name>RMarketIndicatorBaseEnum</Name>
+      <Link>Base Enums\RMarketIndicatorBaseEnum</Link>
+    </Content>
+    <Content Include="AxEnum\RMarketIndicatorType">
+      <SubType>Content</SubType>
+      <Name>RMarketIndicatorType</Name>
+      <Link>Base Enums\RMarketIndicatorType</Link>
+    </Content>
+    <Content Include="AxForm\RMarketAPIMethodLog">
+      <SubType>Content</SubType>
+      <Name>RMarketAPIMethodLog</Name>
+      <Link>Forms\RMarketAPIMethodLog</Link>
+    </Content>
+    <Content Include="AxForm\RMarketCandleGapsForm">
+      <SubType>Content</SubType>
+      <Name>RMarketCandleGapsForm</Name>
+      <Link>Forms\RMarketCandleGapsForm</Link>
+    </Content>
+    <Content Include="AxForm\RMarketCandleStatForm">
+      <SubType>Content</SubType>
+      <Name>RMarketCandleStatForm</Name>
+      <Link>Forms\RMarketCandleStatForm</Link>
+    </Content>
+    <Content Include="AxForm\RMarketCandleTable">
+      <SubType>Content</SubType>
+      <Name>RMarketCandleTable</Name>
+      <Link>Forms\RMarketCandleTable</Link>
+    </Content>
+    <Content Include="AxForm\RMarketIndicatorSetupTable">
+      <SubType>Content</SubType>
+      <Name>RMarketIndicatorSetupTable</Name>
+      <Link>Forms\RMarketIndicatorSetupTable</Link>
+    </Content>
+    <Content Include="AxForm\RMarketIndicatorTable">
+      <SubType>Content</SubType>
+      <Name>RMarketIndicatorTable</Name>
+      <Link>Forms\RMarketIndicatorTable</Link>
+    </Content>
+    <Content Include="AxForm\RMarketSymbolTable">
+      <SubType>Content</SubType>
+      <Name>RMarketSymbolTable</Name>
+      <Link>Forms\RMarketSymbolTable</Link>
+    </Content>
+    <Content Include="AxForm\RMarketTable">
+      <SubType>Content</SubType>
+      <Name>RMarketTable</Name>
+      <Link>Forms\RMarketTable</Link>
+    </Content>
+    <Content Include="AxMenuExtension\MainMenu.RMarket">
+      <SubType>Content</SubType>
+      <Name>MainMenu.RMarket</Name>
+      <Link>Menu Extensions\MainMenu.RMarket</Link>
+    </Content>
+    <Content Include="AxMenuItemAction\RMarketAPI_Kline">
+      <SubType>Content</SubType>
+      <Name>RMarketAPI_Kline</Name>
+      <Link>Action Menu Items\RMarketAPI_Kline</Link>
+    </Content>
+    <Content Include="AxMenuItemAction\RMarketFixGapsCalc">
+      <SubType>Content</SubType>
+      <Name>RMarketFixGapsCalc</Name>
+      <Link>Action Menu Items\RMarketFixGapsCalc</Link>
+    </Content>
+    <Content Include="AxMenuItemAction\RMarketFixGapsDownload">
+      <SubType>Content</SubType>
+      <Name>RMarketFixGapsDownload</Name>
+      <Link>Action Menu Items\RMarketFixGapsDownload</Link>
+    </Content>
+    <Content Include="AxMenuItemDisplay\RMarketAPIMethodLog">
+      <SubType>Content</SubType>
+      <Name>RMarketAPIMethodLog</Name>
+      <Link>Display Menu Items\RMarketAPIMethodLog</Link>
+    </Content>
+    <Content Include="AxMenuItemDisplay\RMarketCandleGapsForm">
+      <SubType>Content</SubType>
+      <Name>RMarketCandleGapsForm</Name>
+      <Link>Display Menu Items\RMarketCandleGapsForm</Link>
+    </Content>
+    <Content Include="AxMenuItemDisplay\RMarketCandleStatForm">
+      <SubType>Content</SubType>
+      <Name>RMarketCandleStatForm</Name>
+      <Link>Display Menu Items\RMarketCandleStatForm</Link>
+    </Content>
+    <Content Include="AxMenuItemDisplay\RMarketCandleTable">
+      <SubType>Content</SubType>
+      <Name>RMarketCandleTable</Name>
+      <Link>Display Menu Items\RMarketCandleTable</Link>
+    </Content>
+    <Content Include="AxMenuItemDisplay\RMarketIndicatorSetupTable">
+      <SubType>Content</SubType>
+      <Name>RMarketIndicatorSetupTable</Name>
+      <Link>Display Menu Items\RMarketIndicatorSetupTable</Link>
+    </Content>
+    <Content Include="AxMenuItemDisplay\RMarketIndicatorTable">
+      <SubType>Content</SubType>
+      <Name>RMarketIndicatorTable</Name>
+      <Link>Display Menu Items\RMarketIndicatorTable</Link>
+    </Content>
+    <Content Include="AxMenuItemDisplay\RMarketSymbolTable">
+      <SubType>Content</SubType>
+      <Name>RMarketSymbolTable</Name>
+      <Link>Display Menu Items\RMarketSymbolTable</Link>
+    </Content>
+    <Content Include="AxMenuItemDisplay\RMarketTable">
+      <SubType>Content</SubType>
+      <Name>RMarketTable</Name>
+      <Link>Display Menu Items\RMarketTable</Link>
+    </Content>
+    <Content Include="AxMenu\RMarketMenu">
+      <SubType>Content</SubType>
+      <Name>RMarketMenu</Name>
+      <Link>Menus\RMarketMenu</Link>
+    </Content>
+    <Content Include="AxQuery\RMarketCandleGapsQuery">
+      <SubType>Content</SubType>
+      <Name>RMarketCandleGapsQuery</Name>
+      <Link>Simple Queries\RMarketCandleGapsQuery</Link>
+    </Content>
+    <Content Include="AxQuery\RMarketCandleStatQuery">
+      <SubType>Content</SubType>
+      <Name>RMarketCandleStatQuery</Name>
+      <Link>Simple Queries\RMarketCandleStatQuery</Link>
+    </Content>
+    <Content Include="AxQuery\RMarketCandleViewQuery">
+      <SubType>Content</SubType>
+      <Name>RMarketCandleViewQuery</Name>
+      <Link>Simple Queries\RMarketCandleViewQuery</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\RMarketCandleTableMaintain">
+      <SubType>Content</SubType>
+      <Name>RMarketCandleTableMaintain</Name>
+      <Link>Security Privileges\RMarketCandleTableMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\RMarketCandleTableView">
+      <SubType>Content</SubType>
+      <Name>RMarketCandleTableView</Name>
+      <Link>Security Privileges\RMarketCandleTableView</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\RMarketIndicatorSetupTableMaintain">
+      <SubType>Content</SubType>
+      <Name>RMarketIndicatorSetupTableMaintain</Name>
+      <Link>Security Privileges\RMarketIndicatorSetupTableMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\RMarketIndicatorSetupTableView">
+      <SubType>Content</SubType>
+      <Name>RMarketIndicatorSetupTableView</Name>
+      <Link>Security Privileges\RMarketIndicatorSetupTableView</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\RMarketIndicatorTableMaintain">
+      <SubType>Content</SubType>
+      <Name>RMarketIndicatorTableMaintain</Name>
+      <Link>Security Privileges\RMarketIndicatorTableMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\RMarketIndicatorTableView">
+      <SubType>Content</SubType>
+      <Name>RMarketIndicatorTableView</Name>
+      <Link>Security Privileges\RMarketIndicatorTableView</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\RMarketSymbolTableMaintain">
+      <SubType>Content</SubType>
+      <Name>RMarketSymbolTableMaintain</Name>
+      <Link>Security Privileges\RMarketSymbolTableMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\RMarketSymbolTableView">
+      <SubType>Content</SubType>
+      <Name>RMarketSymbolTableView</Name>
+      <Link>Security Privileges\RMarketSymbolTableView</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\RMarketTableMaintain">
+      <SubType>Content</SubType>
+      <Name>RMarketTableMaintain</Name>
+      <Link>Security Privileges\RMarketTableMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\RMarketTableView">
+      <SubType>Content</SubType>
+      <Name>RMarketTableView</Name>
+      <Link>Security Privileges\RMarketTableView</Link>
+    </Content>
+    <Content Include="AxSecurityRole\RMarketRole">
+      <SubType>Content</SubType>
+      <Name>RMarketRole</Name>
+      <Link>Security Roles\RMarketRole</Link>
+    </Content>
+    <Content Include="AxTable\RMarketAPIMethodLog">
+      <SubType>Content</SubType>
+      <Name>RMarketAPIMethodLog</Name>
+      <Link>Tables\RMarketAPIMethodLog</Link>
+    </Content>
+    <Content Include="AxTable\RMarketAPIMethodTable">
+      <SubType>Content</SubType>
+      <Name>RMarketAPIMethodTable</Name>
+      <Link>Tables\RMarketAPIMethodTable</Link>
+    </Content>
+    <Content Include="AxTable\RMarketCandleTable">
+      <SubType>Content</SubType>
+      <Name>RMarketCandleTable</Name>
+      <Link>Tables\RMarketCandleTable</Link>
+    </Content>
+    <Content Include="AxTable\RMarketDim">
+      <SubType>Content</SubType>
+      <Name>RMarketDim</Name>
+      <Link>Tables\RMarketDim</Link>
+    </Content>
+    <Content Include="AxTable\RMarketIndicatorLinkTable">
+      <SubType>Content</SubType>
+      <Name>RMarketIndicatorLinkTable</Name>
+      <Link>Tables\RMarketIndicatorLinkTable</Link>
+    </Content>
+    <Content Include="AxTable\RMarketIndicatorSetupTable">
+      <SubType>Content</SubType>
+      <Name>RMarketIndicatorSetupTable</Name>
+      <Link>Tables\RMarketIndicatorSetupTable</Link>
+    </Content>
+    <Content Include="AxTable\RMarketIndicatorTable">
+      <SubType>Content</SubType>
+      <Name>RMarketIndicatorTable</Name>
+      <Link>Tables\RMarketIndicatorTable</Link>
+    </Content>
+    <Content Include="AxTable\RMarketIntervals">
+      <SubType>Content</SubType>
+      <Name>RMarketIntervals</Name>
+      <Link>Tables\RMarketIntervals</Link>
+    </Content>
+    <Content Include="AxTable\RMarketSymbolIntervals">
+      <SubType>Content</SubType>
+      <Name>RMarketSymbolIntervals</Name>
+      <Link>Tables\RMarketSymbolIntervals</Link>
+    </Content>
+    <Content Include="AxTable\RMarketSymbolTable">
+      <SubType>Content</SubType>
+      <Name>RMarketSymbolTable</Name>
+      <Link>Tables\RMarketSymbolTable</Link>
+    </Content>
+    <Content Include="AxTable\RMarketTable">
+      <SubType>Content</SubType>
+      <Name>RMarketTable</Name>
+      <Link>Tables\RMarketTable</Link>
+    </Content>
+    <Content Include="AxTable\RMarketTimestampTable">
+      <SubType>Content</SubType>
+      <Name>RMarketTimestampTable</Name>
+      <Link>Tables\RMarketTimestampTable</Link>
+    </Content>
+    <Content Include="AxView\RMarketCandleGapsView">
+      <SubType>Content</SubType>
+      <Name>RMarketCandleGapsView</Name>
+      <Link>Views\RMarketCandleGapsView</Link>
+    </Content>
+    <Content Include="AxView\RMarketCandleStatView">
+      <SubType>Content</SubType>
+      <Name>RMarketCandleStatView</Name>
+      <Link>Views\RMarketCandleStatView</Link>
+    </Content>
+    <Content Include="AxView\RMarketCandleView">
+      <SubType>Content</SubType>
+      <Name>RMarketCandleView</Name>
+      <Link>Views\RMarketCandleView</Link>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(BuildTasksDirectory)\Microsoft.Dynamics.Framework.Tools.BuildTasks.17.0.targets" />
+</Project>
