@@ -15,8 +15,8 @@
     <ProjectGuid>{ef9030f0-bc69-4d6f-94c4-58e10c7a4f27}</ProjectGuid>
     <Name>RMarket</Name>
     <RootNamespace>RMarket</RootNamespace>
-    <StartupType>MenuItemDisplay</StartupType>
-    <StartupObject>RMarketCandleGapsForm</StartupObject>
+    <StartupType>Class</StartupType>
+    <StartupObject>RMarketIndicatorCalc</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <Configuration>Debug</Configuration>
@@ -139,6 +139,11 @@
       <SubType>Content</SubType>
       <Name>RMarketIndicatorCalculator</Name>
       <Link>Classes\IndicatorCalculator\RMarketIndicatorCalculator</Link>
+    </Content>
+    <Content Include="AxClass\RMarketIndicatorCalculator_ATR">
+      <SubType>Content</SubType>
+      <Name>RMarketIndicatorCalculator_ATR</Name>
+      <Link>Classes\IndicatorCalculator\RMarketIndicatorCalculator_ATR</Link>
     </Content>
     <Content Include="AxClass\RMarketIndicatorCalculator_EMA">
       <SubType>Content</SubType>
@@ -270,6 +275,11 @@
       <Name>RMarketCandleVolume</Name>
       <Link>Extended Data Types\RMarketCandleVolume</Link>
     </Content>
+    <Content Include="AxEdt\RMarketDimRecId">
+      <SubType>Content</SubType>
+      <Name>RMarketDimRecId</Name>
+      <Link>EDT Integer64s\RMarketDimRecId</Link>
+    </Content>
     <Content Include="AxEdt\RMarketDurationMs">
       <SubType>Content</SubType>
       <Name>RMarketDurationMs</Name>
@@ -279,6 +289,11 @@
       <SubType>Content</SubType>
       <Name>RMarketId</Name>
       <Link>EDT Strings\RMarketId</Link>
+    </Content>
+    <Content Include="AxEdt\RMarketIndicatorId">
+      <SubType>Content</SubType>
+      <Name>RMarketIndicatorId</Name>
+      <Link>EDT Strings\RMarketIndicatorId</Link>
     </Content>
     <Content Include="AxEdt\RMarketIndicatorParameter">
       <SubType>Content</SubType>
